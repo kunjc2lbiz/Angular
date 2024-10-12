@@ -15,7 +15,7 @@
     <!-- So we use property binding in these scenarios. We often use square brackets and not bind -->
 
     <!-- the other scenario we use is BIND-VALUE/BIND-DISABLED etc which is property of property binding -->
-    <input bind-value="product.name"><br>
+    <!-- <input bind-value="product.name"><br> -->
 
     <!-- We also have Attribute Binding: Respresents initial value and does not change -->
     <!-- Examples are : aria-label, aria-hidden, aria-expanded, aria-control -->
@@ -23,7 +23,11 @@
     <!-- <input [value]="product.name" [attr.aria-label]="name"> -->
 
     <!-- Now we understand event binding, refer images in assets folder. -->
-    <label>Event Binding Example: </label> <br>
+    <!-- <label>Event Binding Example: </label> <br>
     <input (input)="onNameChange($event)">
-    <p>name : {{name}}</p>
+    <p>name : {{name}}</p> -->
+
+    <button (click)="decrementCartValue()">-</button>
+    <span>{{ addToCart }}</span>
+    <button (click)="incrementCartValue()">+</button>
 </div>
