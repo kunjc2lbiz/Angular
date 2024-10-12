@@ -1,23 +1,29 @@
-<!-- Property Binding: Represents current value and can change -->
-<p>Name: {{ product.name }}</p>
-<!-- Using property binding syntax -->
-<img [src]= "product.pImage">
-<!-- <img src={{product.pImage}}> Using String interpolation -->
-<p>Price: {{ '$' + product.price }}</p>
-<p>Color: {{product.color}}</p>
-<p>Discounted Price: {{ '$' + getDiscountedPrice().toFixed(2) }}</p>
-<p>{{product.inStock > 0 ? 'Only ' + product.inStock +' items left': 'Not in Stock'}}</p>
-<p> My name = {{name}}</p>
+<div class="ekart--product--container">
+    <!-- Property Binding: Represents current value and can change -->
+    <p>Name: {{ product.name }}</p>
+    <!-- Using property binding syntax -->
+    <img [src]= "product.pImage">
+    <!-- <img src={{product.pImage}}> Using String interpolation -->
+    <p>Price: {{ '$' + product.price }}</p>
+    <p>Color: {{product.color}}</p>
+    <p>Discounted Price: {{ '$' + getDiscountedPrice().toFixed(2) }}</p>
+    <p>{{product.inStock > 0 ? 'Only ' + product.inStock +' items left': 'Not in Stock'}}</p>
 
-<button [disabled]="!(product.inStock > 0)">Buy Now</button><br>
+    <button [disabled]="!(product.inStock > 0)">Buy Now</button><br>
 
-<!-- String interpolation does not work for html attributes like disabled, hidden, checked -->
-<!-- So we use property binding in these scenarios. We often use square brackets and not bind -->
+    <!-- String interpolation does not work for html attributes like disabled, hidden, checked -->
+    <!-- So we use property binding in these scenarios. We often use square brackets and not bind -->
 
-<!-- the other scenario we use is BIND-VALUE/BIND-DISABLED etc which is property of property binding -->
-<input bind-value="name"><br>
+    <!-- the other scenario we use is BIND-VALUE/BIND-DISABLED etc which is property of property binding -->
+    <input bind-value="product.name"><br>
 
-<!-- We also have Attribute Binding: Respresents initial value and does not change -->
-<!-- Examples are : aria-label, aria-hidden, aria-expanded, aria-control -->
-<!-- Examples are : data-id, data-name, data-value, colspan -->
- <input [value]="product.name" [attr.aria-label]="name">
+    <!-- We also have Attribute Binding: Respresents initial value and does not change -->
+    <!-- Examples are : aria-label, aria-hidden, aria-expanded, aria-control -->
+    <!-- Examples are : data-id, data-name, data-value, colspan -->
+    <!-- <input [value]="product.name" [attr.aria-label]="name"> -->
+
+    <!-- Now we understand event binding, refer images in assets folder. -->
+    <label>Event Binding Example: </label> <br>
+    <input (input)="onNameChange($event)">
+    <p>name : {{name}}</p>
+</div>
