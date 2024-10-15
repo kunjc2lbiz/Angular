@@ -13,3 +13,10 @@
 
 1. ngClass is an attribute directive, which allows us to add or remove CSS CLASSES (not css) to or from an HTML element dynamcially, based on some TypeScript expression.
 2. It changes look or behaviour of an element and does not add/remove from DOM
+
+
+
+
+1. To COMMUNICATE(not pass data) between parent & child component, we use CUSTOM PRPERTY BINDING &
+   @Input() Decorator 
+2. In parent component we use CUSTOM PRPERTY BINDING to pass data to child and we use @Input() in child component to get data from parent.
