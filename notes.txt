@@ -5,3 +5,7 @@
 
 
 1. ngIf is a structural directive that is used to completely add or remove DOM element from the webpage based on a given condition
+
+
+1. ngStyle is a attribute directive which allows us to set many inline style of an HTML element using expression
+2. ngStyle helps us to display css dynamcially using expression
