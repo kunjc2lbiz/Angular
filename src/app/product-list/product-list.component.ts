@@ -39,4 +39,6 @@ export class ProductListComponent {
       this.addToCart++;
     }
   }
+
+  listOfString: string[] = ['Mark', 'Steve', 'John', 'Doe', 'Sarah']
 }
