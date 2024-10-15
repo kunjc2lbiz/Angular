@@ -9,3 +9,7 @@
 
 1. ngStyle is a attribute directive which allows us to set many inline style of an HTML element using expression
 2. ngStyle helps us to display css dynamcially using expression
+
+
+1. ngClass is an attribute directive, which allows us to add or remove CSS CLASSES (not css) to or from an HTML element dynamcially, based on some TypeScript expression.
+2. It changes look or behaviour of an element and does not add/remove from DOM

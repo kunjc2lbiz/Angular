@@ -1,8 +1,10 @@
 <div class="ekart--search--product">
     <!-- <input class="ekart-search-product-input" [value]="searchText" (input)="updateSearchText($event)"> -->
     <input class="ekart-search-product-input" [(ngModel)] = "searchText">
-    <button class="btn btn-search">Search</button>
+    <button [ngClass]="{'btn': true, 'btn-search': searchText, 'btn-search-disabled': !searchText}" [disabled]="!searchText">Search</button>
 </div>
 <div class="ekart-search-result-for"><p *ngIf="searchText !== '' "><strong>Search result for:</strong> {{ searchText }}</p></div>
 
 <!-- In order to use NgModel, we have to import FormsModule in app.module.ts and it is a 3rd party Library -->
+
+<!-- false, '', null, undefined, 0 are falsy values -->
