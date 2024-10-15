@@ -1,0 +1,3 @@
+1. ngFor directive iterates over a collection of data like an array, list, etc. and creates an HTML element for each of the items from the HTML template
+2. It is used to repeat a portion of HTML template once per each item for an iterable list.
+3. It is a structural directive. It manipulates DOM by adding/removing elements from DOM.
