@@ -17,6 +17,15 @@
 
 
 
-1. To COMMUNICATE(not pass data) between parent & child component, we use CUSTOM PRPERTY BINDING &
+1. To COMMUNICATE(not pass data) from parent to child component, we use CUSTOM PRPERTY BINDING &
    @Input() Decorator 
 2. In parent component we use CUSTOM PRPERTY BINDING to pass data to child and we use @Input() in child component to get data from parent.
+
+
+
+1. To COMMUNICATE(not pass data) to parent from child component, we use CUSTOM EVENT BINDING &
+   @Output() Decorator 
+2. In parent component we use CUSTOM EVENT BINDING to pass data to child and we use @Output() in child component to get data from parent.
+
+NOTE: we can't use 2 structural directives in 1 tag. e.g: ngFor and ngIf can't be used in 1 tag.
+<app-product [product]="prod" *ngIf="" *ngFor=""> </app-product>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -15,4 +15,15 @@ export class FilterComponent {
   
   @Input()
   outOfStock: number = 0;
+
+  selectedRadioButton: string = 'All' // To select deafult radio button using 2 way data binding
+  // this variable will keep track selected radio button in child(filter) component
+
+  @Output()
+  selectedRadioButtonChanged: EventEmitter<string> = new EventEmitter<string>();
+  // To get data from child we use @Output()
+
+  onSelectedRadioButtonChanged(){
+    this.selectedRadioButtonChanged.emit(this.selectedRadioButton);
+  }
 }

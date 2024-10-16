@@ -536,4 +536,9 @@ export class ProductListComponent {
   totalProductCount = this.products.length;
   totalProductInStock = this.products.filter((p) => p.is_in_inventory === true).length;
   totalProductOutOfStock = this.products.filter((p) => p.is_in_inventory === false).length;
+
+  selectedFilterRadioButton: string = 'All'; // this variable will keep track selected radio button in parent(product-list) component
+  onFilterChanged(value: string){
+    this.selectedFilterRadioButton = value;
+  }
 }
