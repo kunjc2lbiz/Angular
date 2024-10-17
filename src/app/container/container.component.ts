@@ -41,4 +41,10 @@ export class ContainerComponent {
   }
 
   listOfString: string[] = ['Mark', 'Steve', 'John', 'Doe', 'Sarah']
+
+  searchTextReceivedFromSearchComponent: string = '';
+
+  setSearchText(value: string){
+    this.searchTextReceivedFromSearchComponent = value;
+  }
 }

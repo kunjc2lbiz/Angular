@@ -32,9 +32,9 @@
     <button (click)="incrementCartValue()">+</button> -->
 
     <!-- Commenting whole code above, now building search functionality -->
-     <app-search></app-search>
+     <app-search (searchTextChanged)="setSearchText($event)"></app-search>
      <!-- <div *ngFor="let item of listOfString">
         <p>Current Element: {{item}}</p>
      </div> -->
-     <product-list></product-list>
+     <product-list [searchTextInProductList]="searchTextReceivedFromSearchComponent"></product-list>
 </div>

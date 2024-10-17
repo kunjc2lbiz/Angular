@@ -29,3 +29,7 @@
 
 NOTE: we can't use 2 structural directives in 1 tag. e.g: ngFor and ngIf can't be used in 1 tag.
 <app-product [product]="prod" *ngIf="" *ngFor=""> </app-product>
+
+
+
+1. To pass data between 2 non-related components (or you can say siblings), from one child pass data to parent using @Output() and take data from parent to second child using @Input()
