@@ -33,3 +33,8 @@ NOTE: we can't use 2 structural directives in 1 tag. e.g: ngFor and ngIf can't b
 
 
 1. To pass data between 2 non-related components (or you can say siblings), from one child pass data to parent using @Output() and take data from parent to second child using @Input()
+
+
+
+1. A template reference variable is a variable which stores a reference to a DOM element, component or directive on which it is used.
+2. An object gets created in DOM for the variable where it is used.
