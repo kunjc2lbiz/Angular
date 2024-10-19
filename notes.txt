@@ -38,3 +38,6 @@ NOTE: we can't use 2 structural directives in 1 tag. e.g: ngFor and ngIf can't b
 
 1. A template reference variable is a variable which stores a reference to a DOM element, component or directive on which it is used.
 2. An object gets created in DOM for the variable where it is used.
+
+
+1. @ViewChild() is used to query and get a reference of DOM element in component. It returns the first matching element

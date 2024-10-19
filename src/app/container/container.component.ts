@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'app-container',
@@ -47,4 +48,7 @@ export class ContainerComponent {
   setSearchText(value: string){
     this.searchTextReceivedFromSearchComponent = value;
   }
+
+  // I can use component name itself as selector in ViewChild()
+  @ViewChild(ProductListComponent) productListComponent: ProductListComponent
 }

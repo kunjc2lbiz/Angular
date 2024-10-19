@@ -41,5 +41,5 @@
          #productListComponent
       >
       </product-list>
-     <product-detail *ngIf="productListComponent.selectedProduct"></product-detail>
+     <product-detail *ngIf="productListComponent.selectedProduct" [productListComponentInProductDetailComponent]="productListComponent"></product-detail>
 </div>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -20,9 +20,17 @@ export class SearchComponent {
     this.searchText = event.target.value;
   }
 
-  onSearchText(inputElement: HTMLInputElement){
+  // storing reference of input element in this variable
+  // 1. read - use it to read the different token from queried elements
+  // 2. static - Determine whether query is resolved
+  //             true - When the view is initialized (before the first change detection) for the first time.
+  //             By default False  - if you want it to be resolved after every change detection
+  @ViewChild('searchInput', {static: true}) searchInputElement : ElementRef; 
+  
+
+  onSearchText(){
     // console.log(inputElement.value);
-    this.searchText = inputElement.value;
+    this.searchText = this.searchInputElement.nativeElement.value;
     this.searchTextChanged.emit(this.searchText);
   }
 }
